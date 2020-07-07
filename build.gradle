@@ -51,3 +51,13 @@ dependencies {
     compile group: 'org.jasypt', name: 'jasypt', version: '1.9.2'
 
 }
+
+shadowJar{
+    baseName = 'app'
+    classifier = ''
+    archiveVersion = ''
+}
+
+task stage{
+    dependsOn shadowJar
+}
